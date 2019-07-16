@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="SCH的博客">
 <meta property="og:description" content="javascript最近在编程时，发现js的基础有点薄弱，特地重新学习了一遍javascript，刚好搭建了博客，就把学习过程中的一些基础与常用知识点记录在此。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-16T14:06:51.675Z">
+<meta property="og:updated_time" content="2019-07-16T14:13:41.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript学习笔记">
 <meta name="twitter:description" content="javascript最近在编程时，发现js的基础有点薄弱，特地重新学习了一遍javascript，刚好搭建了博客，就把学习过程中的一些基础与常用知识点记录在此。">
@@ -425,7 +425,9 @@
 <li>String</li>
 <li>Boolean</li>
 <li>Array</li>
-<li>Object<br>将字符串转化为一个数字<br>  var str=’123’;<br>  var num=Number(str);<br>将数字转化为字符串<br>  var num=123;<br>  var str=num.toString();<h3 id="javascript中的字符串方法"><a href="#javascript中的字符串方法" class="headerlink" title="javascript中的字符串方法"></a>javascript中的字符串方法</h3></li>
+<li>Object<h3 id="javascript中的字符串方法"><a href="#javascript中的字符串方法" class="headerlink" title="javascript中的字符串方法"></a>javascript中的字符串方法</h3></li>
+<li><em>将字符串转化为一个数字*</em><br>   var str=’123’;<br>   var num=Number(str);</li>
+<li><em>将数字转化为字符串*</em><br>   var num=123;<br>   var str=num.toString();</li>
 <li><em>获得字符串长度*</em><br>   var str=’this is a string’;<br>   str.length;</li>
 <li><em>检索特定字符串字符*</em><br>   str[0]//从0开始<br>   str[str.length-1]</li>
 <li><em>从字符串中查找子字符串并提取它*</em><br>   str.indexOf(‘is’);<br>答案为2，因为is在str内的位置[0,1,2，从第三个字符开始]，若子字符串不在主字符串中，返回-1<br>知道子字符串的开始和结束位置，可以用<strong>slice()提取</strong><br>   str.slice(0,4)<br>结果为this，不包括最后一个位置<br>   str.slice(0)<br>结束位置不写则从开始位置提取剩余所有字符</li>
