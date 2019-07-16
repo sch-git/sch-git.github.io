@@ -27,20 +27,20 @@ categories:
 * Boolean
 * Array
 * Object
-将字符串转化为一个数字
+### javascript中的字符串方法
+__将字符串转化为一个数字__
     var str='123';
     var num=Number(str);
-将数字转化为字符串
+__将数字转化为字符串__
     var num=123;
     var str=num.toString();
-### javascript中的字符串方法
-**获得字符串长度**
+__获得字符串长度__
     var str='this is a string';
     str.length;
-**检索特定字符串字符**
+__检索特定字符串字符__
     str[0]//从0开始
     str[str.length-1]
-**从字符串中查找子字符串并提取它**
+__从字符串中查找子字符串并提取它__
     str.indexOf('is');
 答案为2，因为is在str内的位置[0,1,2，从第三个字符开始]，若子字符串不在主字符串中，返回-1
 知道子字符串的开始和结束位置，可以用**slice()提取**
@@ -48,10 +48,10 @@ categories:
 结果为this，不包括最后一个位置
     str.slice(0)
 结束位置不写则从开始位置提取剩余所有字符
-**大小写转换**
+__大小写转换__
     str.toUpperCase();//转大写
     str.toLowerCase();//转小写
-**替换字符串某部分**
+__替换字符串某部分__
     str.replace('this','test');
 在实际程序中，想要真正更新browserType变量的值，需要设置变量的值等于刚才的操作结果
     strtest=str.replace('this','test');
