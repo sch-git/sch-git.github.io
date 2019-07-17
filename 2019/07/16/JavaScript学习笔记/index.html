@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="SCH的博客">
 <meta property="og:description" content="javascript最近在编程时，发现js的基础有点薄弱，特地重新学习了一遍javascript，刚好搭建了博客，就把学习过程中的一些基础与常用知识点记录在此。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-17T13:13:22.936Z">
+<meta property="og:updated_time" content="2019-07-17T13:15:24.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript学习笔记">
 <meta name="twitter:description" content="javascript最近在编程时，发现js的基础有点薄弱，特地重新学习了一遍javascript，刚好搭建了博客，就把学习过程中的一些基础与常用知识点记录在此。">
@@ -465,9 +465,83 @@
 <p>在实际程序中，想要真正更新browserType变量的值，需要设置变量的值等于刚才的操作结果</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strtest=str.replace(<span class="string">'this'</span>,<span class="string">'test'</span>);</span><br></pre></td></tr></table></figure>
 
-<p><strong>特殊字符</strong><br>反斜杠是一个转义字符<br>| 代码 | 输出 |<br>| — | — |<br>| &#39; | 单引号 |<br>| &quot; | 双引号 |<br>| \ | 反斜杠 |<br>| \n | 换行 |<br>| \r | 回车 |<br>| \t | tab制表符 |<br>| \b | 退格符 |<br>| \f | 换页符 |<br><strong>其他常用方法</strong><br>| 方法 | 描述 |<br>| - | - |<br>| charAt() |返回指定位置的字符 |<br>| charCodeAt() |返回指定位置字符的unicode值 |<br>| concat() |连接两个或多个字符串，返回连接后的字符串 |<br>| fromCharCode() |将unicode转为字符串 |</p>
-<h3 id="字符串可以是对象"><a href="#字符串可以是对象" class="headerlink" title="字符串可以是对象"></a>字符串可以是对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"hello"</span>);</span><br><span class="line"><span class="keyword">typeof</span> str<span class="comment">//返回object</span></span><br></pre></td></tr></table></figure>
-
+<p><strong>特殊字符</strong><br>反斜杠是一个转义字符</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#39;</td>
+<td>单引号</td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>双引号</td>
+</tr>
+<tr>
+<td>\</td>
+<td>反斜杠</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>tab制表符</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>退格符</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页符</td>
+</tr>
+<tr>
+<td><strong>其他常用方法</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>charAt()</td>
+<td>返回指定位置的字符</td>
+</tr>
+<tr>
+<td>charCodeAt()</td>
+<td>返回指定位置字符的unicode值</td>
+</tr>
+<tr>
+<td>concat()</td>
+<td>连接两个或多个字符串，返回连接后的字符串</td>
+</tr>
+<tr>
+<td>fromCharCode()</td>
+<td>将unicode转为字符串</td>
+</tr>
+<tr>
+<td>### 字符串可以是对象</td>
+<td></td>
+</tr>
+<tr>
+<td><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"hello"</span>);</span><br><span class="line"><span class="keyword">typeof</span> str<span class="comment">//返回object</span></span><br></pre></td></tr></table></figure></td>
+<td></td>
+</tr>
+</tbody></table>
 <h3 id="for-in循环"><a href="#for-in循环" class="headerlink" title="for/in循环"></a>for/in循环</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=&#123;<span class="attr">name</span>:<span class="string">'sch'</span>,<span class="attr">age</span>:<span class="string">'18'</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(x <span class="keyword">in</span> perosn)&#123;<span class="comment">//x为属性名</span></span><br><span class="line">    <span class="built_in">console</span>.log(x);<span class="comment">//输出name,age</span></span><br><span class="line">    <span class="built_in">console</span>.log(person[x]);<span class="comment">//输出sch,18</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -678,7 +752,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript"><span class="nav-number">1.</span> <span class="nav-text">javascript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">2.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量类型"><span class="nav-number">2.1.</span> <span class="nav-text">变量类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他类型"><span class="nav-number">2.2.</span> <span class="nav-text">其他类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript中的字符串方法"><span class="nav-number">2.3.</span> <span class="nav-text">javascript中的字符串方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串可以是对象"><span class="nav-number">2.4.</span> <span class="nav-text">字符串可以是对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-in循环"><span class="nav-number">2.5.</span> <span class="nav-text">for/in循环</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript"><span class="nav-number">1.</span> <span class="nav-text">javascript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">2.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量类型"><span class="nav-number">2.1.</span> <span class="nav-text">变量类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他类型"><span class="nav-number">2.2.</span> <span class="nav-text">其他类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript中的字符串方法"><span class="nav-number">2.3.</span> <span class="nav-text">javascript中的字符串方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-in循环"><span class="nav-number">2.4.</span> <span class="nav-text">for/in循环</span></a></li></ol></li></ol></div>
             
 
           </div>
