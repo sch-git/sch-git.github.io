@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="SCH的博客">
 <meta property="og:description" content="javascript最近在编程时，发现js的基础有点薄弱，特地重新学习了一遍javascript，刚好搭建了博客，就把学习过程中的一些基础与常用知识点记录在此。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-16T14:15:38.241Z">
+<meta property="og:updated_time" content="2019-07-17T12:54:13.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript学习笔记">
 <meta name="twitter:description" content="javascript最近在编程时，发现js的基础有点薄弱，特地重新学习了一遍javascript，刚好搭建了博客，就把学习过程中的一些基础与常用知识点记录在此。">
@@ -425,8 +425,49 @@
 <li>String</li>
 <li>Boolean</li>
 <li>Array</li>
-<li>Object<h3 id="javascript中的字符串方法"><a href="#javascript中的字符串方法" class="headerlink" title="javascript中的字符串方法"></a>javascript中的字符串方法</h3><strong>将字符串转化为一个数字</strong><br>  var str=’123’;<br>  var num=Number(str);<br><strong>将数字转化为字符串</strong><br>  var num=123;<br>  var str=num.toString();<br><strong>获得字符串长度</strong><br>  var str=’this is a string’;<br>  str.length;<br><strong>检索特定字符串字符</strong><br>  str[0]//从0开始<br>  str[str.length-1]<br><strong>从字符串中查找子字符串并提取它</strong><br>  str.indexOf(‘is’);<br>答案为2，因为is在str内的位置[0,1,2，从第三个字符开始]，若子字符串不在主字符串中，返回-1<br>知道子字符串的开始和结束位置，可以用<strong>slice()提取</strong><br>  str.slice(0,4)<br>结果为this，不包括最后一个位置<br>  str.slice(0)<br>结束位置不写则从开始位置提取剩余所有字符<br><strong>大小写转换</strong><br>  str.toUpperCase();//转大写<br>  str.toLowerCase();//转小写<br><strong>替换字符串某部分</strong><br>  str.replace(‘this’,’test’);<br>在实际程序中，想要真正更新browserType变量的值，需要设置变量的值等于刚才的操作结果<br>  strtest=str.replace(‘this’,’test’);</li>
+<li>Object<h3 id="其他类型"><a href="#其他类型" class="headerlink" title="其他类型"></a>其他类型</h3></li>
+<li>Date</li>
+<li>null</li>
+<li>undefined<h3 id="javascript中的字符串方法"><a href="#javascript中的字符串方法" class="headerlink" title="javascript中的字符串方法"></a>javascript中的字符串方法</h3></li>
 </ul>
+<p><strong>将字符串转化为一个数字</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">'123'</span>;</span><br><span class="line"><span class="keyword">var</span> num=<span class="built_in">Number</span>(str);</span><br></pre></td></tr></table></figure>
+
+<p><strong>将数字转化为字符串</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">123</span>;</span><br><span class="line"><span class="keyword">var</span> str=num.toString();</span><br></pre></td></tr></table></figure>
+
+<p><strong>获得字符串长度</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">'this is a string'</span>;</span><br><span class="line">str.length;</span><br></pre></td></tr></table></figure>
+
+<p><strong>检索特定字符串字符</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str[<span class="number">0</span>]<span class="comment">//从0开始</span></span><br><span class="line">str[str.length<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+<p><strong>从字符串中查找子字符串并提取它</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.indexOf(<span class="string">'is'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>答案为2，因为is在str内的位置[0,1,2，从第三个字符开始]，若子字符串不在主字符串中，返回-1<br>知道子字符串的开始和结束位置，可以用<strong>slice()提取</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.slice(<span class="number">0</span>,<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结果为this，不包括最后一个位置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.slice(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结束位置不写则从开始位置提取剩余所有字符<br><strong>返回指定索引区间的字符串</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> str.substring(x,y)<span class="comment">//不包括y</span></span><br><span class="line">str.substring(x)<span class="comment">//从索引开始到结束</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>大小写转换</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str.toUpperCase();<span class="comment">//转大写</span></span><br><span class="line">str.toLowerCase();<span class="comment">//转小写</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>替换字符串某部分</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.replace(<span class="string">'this'</span>,<span class="string">'test'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在实际程序中，想要真正更新browserType变量的值，需要设置变量的值等于刚才的操作结果</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strtest=str.replace(<span class="string">'this'</span>,<span class="string">'test'</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>特殊字符</strong><br>反斜杠是一个转义字符<br>|代码|输出|<br>|—–|—–|<br>|&#39;|单引号|<br>|&quot;|双引号|<br>|\|反斜杠|<br>|\n|换行|<br>|\r|回车|<br>|\t|tab制表符|<br>|\b|退格符|<br>|\f|换页符|<br><strong>其他常用方法</strong><br>|方法|描述|<br>|—–|—–|<br>|charAt()|返回指定位置的字符|<br>|charCodeAt()|返回指定位置字符的unicode值|<br>|concat()|连接两个或多个字符串，返回连接后的字符串|<br>|fromCharCode()|将unicode转为字符串|</p>
+<h3 id="字符串可以是对象"><a href="#字符串可以是对象" class="headerlink" title="字符串可以是对象"></a>字符串可以是对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"hello"</span>);</span><br><span class="line"><span class="keyword">typeof</span> str<span class="comment">//返回object</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="for-in循环"><a href="#for-in循环" class="headerlink" title="for/in循环"></a>for/in循环</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=&#123;<span class="attr">name</span>:<span class="string">'sch'</span>,<span class="attr">age</span>:<span class="string">'18'</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(x <span class="keyword">in</span> perosn)&#123;<span class="comment">//x为属性名</span></span><br><span class="line">    <span class="built_in">console</span>.log(x);<span class="comment">//输出name,age</span></span><br><span class="line">    <span class="built_in">console</span>.log(person[x]);<span class="comment">//输出sch,18</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -635,7 +676,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript"><span class="nav-number">1.</span> <span class="nav-text">javascript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">2.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量类型"><span class="nav-number">2.1.</span> <span class="nav-text">变量类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript中的字符串方法"><span class="nav-number">2.2.</span> <span class="nav-text">javascript中的字符串方法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript"><span class="nav-number">1.</span> <span class="nav-text">javascript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">2.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量类型"><span class="nav-number">2.1.</span> <span class="nav-text">变量类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他类型"><span class="nav-number">2.2.</span> <span class="nav-text">其他类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript中的字符串方法"><span class="nav-number">2.3.</span> <span class="nav-text">javascript中的字符串方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串可以是对象"><span class="nav-number">2.4.</span> <span class="nav-text">字符串可以是对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-in循环"><span class="nav-number">2.5.</span> <span class="nav-text">for/in循环</span></a></li></ol></li></ol></div>
             
 
           </div>
