@@ -22,15 +22,17 @@ categories:
     str='Hello World!';//单双引号几乎没有区别
     str="Hello World!";
 ### 变量类型
-* Number
-* String
-* Boolean
-* Array
-* Object
+- Number
+- String
+- Boolean
+- Array
+- Object
+
 ### 其他类型
-* Date
-* null
-* undefined
+- Date
+- null
+- undefined
+
 ### javascript中的字符串方法
 
 __将字符串转化为一个数字__
@@ -87,23 +89,23 @@ __替换字符串某部分__
 ```
 __特殊字符__
 反斜杠是一个转义字符
-|代码|输出|
-|-----|-----|
-|\'|单引号|
-|\"|双引号|
-|\\|反斜杠|
-|\n|换行|
-|\r|回车|
-|\t|tab制表符|
-|\b|退格符|
-|\f|换页符|
+代码|输出
+-|-|-
+\'|单引号
+\"|双引号
+\\|反斜杠
+\n|换行
+\r|回车
+\t|tab制表符
+\b|退格符
+\f|换页符
 __其他常用方法__
 |方法|描述|
-|-----|-----|
-|charAt()|返回指定位置的字符|
-|charCodeAt()|返回指定位置字符的unicode值|
-|concat()|连接两个或多个字符串，返回连接后的字符串|
-|fromCharCode()|将unicode转为字符串|
+-|-|-
+charAt()|返回指定位置的字符
+charCodeAt()|返回指定位置字符的unicode值
+concat()|连接两个或多个字符串，返回连接后的字符串
+fromCharCode()|将unicode转为字符串
 ### 字符串可以是对象
 ```javascript
     var str=new String("hello");
