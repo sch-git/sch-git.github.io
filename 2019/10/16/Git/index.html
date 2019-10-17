@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="SCH的博客">
 <meta property="og:description" content="Git简介Git是一种分布式版本管理系统，目前已经成为开发人员做项目版本管理的首选，非开发人员也可以用Git来做自己的文档版本管理工具">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-16T15:26:02.030Z">
+<meta property="og:updated_time" content="2019-10-17T14:59:59.510Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git">
 <meta name="twitter:description" content="Git简介Git是一种分布式版本管理系统，目前已经成为开发人员做项目版本管理的首选，非开发人员也可以用Git来做自己的文档版本管理工具">
@@ -419,13 +419,29 @@
       
         <h2 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h2><p>Git是一种分布式版本管理系统，目前已经成为开发人员做项目版本管理的首选，非开发人员也可以用Git来做自己的文档版本管理工具</p>
 <a id="more"></a>
-<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><p>不知道大家有没有使用git，但是对git命令基本不了解，使用的时候频繁百度，还不敢保证搜索到的就是对的。现在机会来了，掌握了以下git命令，就可以轻松应对90%的需求。<br><strong>git clone</strong><br>从服务器拉取代码<br><strong>git config</strong><br>配置用户名和邮箱<br><strong>git branch</strong><br>创建，重命名，查看，删除项目分支，通常用Git做项目开发时，一般都是在开发分支中进行，完成后再合并到主干</p>
+<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><pre><code>不知道大家有没有使用git，但是对git命令基本不了解，使用的时候频繁百度，还不敢保证搜索到的就是对的经历。现在机会来了，掌握了以下git命令，就可以轻松应对90%的需求。</code></pre><p><strong>git clone</strong><br>    从服务器拉取代码<br><strong>git config</strong><br>    配置用户名和邮箱<br><strong>git branch</strong></p>
+<blockquote>
+<p>创建，重命名，查看，删除项目分支，通常用Git做项目开发时，一般都是在开发分支中进行，完成后再合并到主干</p>
+</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch test/0.0</span><br></pre></td></tr></table></figure>
 
-<p>创建一个名为test/0.0的分支，分支名只要不包含特殊字符即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -m test/0.0 test/0.1</span><br></pre></td></tr></table></figure>
+<pre><code>创建一个名为test/0.0的分支，分支名只要不包含特殊字符即可</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -m test/0.0 test/0.1</span><br></pre></td></tr></table></figure>
 
-<h2 id="如果觉得之前的分支名不合适，可以为新建的分支重命名，重命名分支为test-0-1"><a href="#如果觉得之前的分支名不合适，可以为新建的分支重命名，重命名分支为test-0-1" class="headerlink" title="如果觉得之前的分支名不合适，可以为新建的分支重命名，重命名分支为test/0.1"></a>如果觉得之前的分支名不合适，可以为新建的分支重命名，重命名分支为test/0.1</h2><p>未完待续<br><a href="https://mp.weixin.qq.com/s/d7i_4ls0Ru539PpX0yz0UA" target="_blank" rel="noopener">参考文章</a></p>
+<pre><code>如果觉得之前的分支名不合适，可以为新建的分支重命名，重命名分支为test/0.1</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+
+<pre><code>通过不带参数的branch命令可以查看当前项目分支列表</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d test/0.1</span><br></pre></td></tr></table></figure>
+
+<pre><code>可以通过-d命令删除分支</code></pre><p><strong>git checkout</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout test/0.1</span><br></pre></td></tr></table></figure>
+
+<pre><code>切换到test/0.1分支</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line">// Changes not staged for commit(改动文件未提交到暂存区)</span><br><span class="line">// Change to be commited(文件已提交到暂存区)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add fileName</span><br></pre></td></tr></table></figure>
+
+<pre><code>通过指定文件名fileName可以将文件添加到暂存区，添加所有文件可用git add .</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;提交原因&quot;</span><br></pre></td></tr></table></figure>
+
+<pre><code>通过-m参数可以将文件变动提交到版本库，-m参数可以直接再命令行里面输入描述文本</code></pre><hr>
+<p>未完待续<br><a href="https://mp.weixin.qq.com/s/d7i_4ls0Ru539PpX0yz0UA" target="_blank" rel="noopener">参考文章</a></p>
 
       
     </div>
@@ -638,7 +654,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git简介"><span class="nav-number">1.</span> <span class="nav-text">Git简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用操作"><span class="nav-number">2.</span> <span class="nav-text">常用操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果觉得之前的分支名不合适，可以为新建的分支重命名，重命名分支为test-0-1"><span class="nav-number">3.</span> <span class="nav-text">如果觉得之前的分支名不合适，可以为新建的分支重命名，重命名分支为test/0.1</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git简介"><span class="nav-number">1.</span> <span class="nav-text">Git简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用操作"><span class="nav-number">2.</span> <span class="nav-text">常用操作</span></a></li></ol></div>
             
 
           </div>
